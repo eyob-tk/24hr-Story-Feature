@@ -1,0 +1,135 @@
+.app-container{
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 16px;
+  font-family: sans-serif;
+}
+
+.stories-bar{
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.story-circle{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-story-btn{
+  border: 2px dashed #888;
+  background-color: #f0f0f0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #555;
+}
+
+.avatar-circle{
+  border: 2px solid #e1306c;
+  overflow: hidden;
+}
+
+.avatar-circle img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.close-btn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.story-image{
+  max-width: 1080px;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.progress-container{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 1002;
+}
+
+.progress-track{
+  flex: 1;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill{
+  height: 100%;
+  background-color: #ffffff;
+  width: 0%;
+}
+
+.progress-fill.completed{
+  width: 100%;
+}
+
+.progress-fill.active{
+  animation: fillProgress 3s linear forwards;
+}
+
+@keyframes fillProgress{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+.tap-area{
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  width: 30%;
+  z-index: 1001;
+}
+
+.tap-area.left{
+  left: 0;
+}
+
+.tap-area.right{
+  right: 0;
+}
