@@ -6,7 +6,7 @@ A lightweight, responsive, client-side web application replicating the core func
 
 ## 🌟 Features
 
-* **Ephemeral Content (24-Hour Expiration):** Uploaded stories automatically expire and clear out after 24 hours ($86,400,000\text{ ms}$).
+* **Ephemeral Content (24-Hour Expiration):** Uploaded stories automatically expire and clear out after 24 hours.
 * **Client-Side Persistence:** Stories are saved in `localStorage` as Base64 strings, persisting across browser reloads until they expire.
 * **Segmented Dynamic Progress Bar:** A custom CSS/React progress bar split per story that fills up automatically over 3 seconds.
 * **Auto-Advancement:** Stories auto-advance to the next item when the timer finishes and automatically close after the last story.
